@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  parade:
+    build:
+      context: .
+    command: npx lighthouse-parade ${DOMAIN:?You have to set DOMAIN var}
+    working_dir: /app
+    volumes: 
+      - ./results:/app
+
